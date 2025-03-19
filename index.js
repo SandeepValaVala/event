@@ -4,7 +4,7 @@ let index = 0;
 let slide = document.getElementById("slide");
 
 function changeSlide() {
-    slide.style.opacity = 0;
+    slide.style.opacity = 1;
     setTimeout(() => {
         slide.src = images[index];
         slide.style.opacity = 1;
@@ -18,3 +18,10 @@ setInterval(changeSlide, 3000);
 function toggleMenu() {
     document.getElementById("nav-links").classList.toggle("show");
 }
+
+
+
+setTimeout(() => {
+    document.getElementById("loader").classList.add("fade-out");
+    document.getElementById("content").style.display = "block";
+}, 2000);
